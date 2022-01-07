@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/oscar/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-fpath=('/Users/oscar/git-subrepo/share/zsh-completion' $fpath)
+fpath=("$HOME/git-subrepo/share/zsh-completion" $fpath)
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -131,7 +131,7 @@ alias ip="curl icanhazip.com"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-source /Users/oscar/git-subrepo/.rc
+source $HOME/git-subrepo/.rc
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
