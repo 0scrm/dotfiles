@@ -177,6 +177,9 @@ alias tmr="tmux rename-session -t"
 alias v="nvim"
 alias z="zellij"
 alias za="zellij attach"
+alias zn="zellij --session"
+alias zk="zellij kill-session"
+alias zka="zellij kill-all-sessions"
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh)"
@@ -185,6 +188,6 @@ fi
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(zellij setup --generate-auto-start zsh)"
+#eval "$(zellij setup --generate-auto-start zsh)"
 
 eval "$(atuin init zsh)"
