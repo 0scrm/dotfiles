@@ -172,11 +172,14 @@ chflags nohidden ~/Library
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 30
 
+# Hide dock
+defaults write com.apple.dock autohide -bool true
+
 # Remove Dock hide/show delay
 defaults write com.apple.Dock autohide-delay -float 0
 
 # Set Dock position to the left of the screen
-defaults write com.apple.dock "orientation" -string "left"
+defaults write com.apple.dock "orientation" -string "right"
 
 # Hide recent items from the Dock
 defaults write com.apple.dock "show-recents" -bool "false"
