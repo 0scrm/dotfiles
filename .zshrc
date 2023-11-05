@@ -122,14 +122,15 @@ plugins=(git sudo web-search zsh-autosuggestions)
 # export MANPATH="/usr/local/man:$MANPATH"
 export PATH=/opt/homebrew/bin:$PATH
 export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PNPM_HOME="/Users/oscar/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 export BAT_THEME="TwoDark"
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && \. "/usr/local/opt/nvm/etc/bash_completion"
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -176,11 +177,12 @@ alias tms="tmux new -s"
 alias tma="tmux attach -t"
 alias tmr="tmux rename-session -t"
 alias v="nvim"
-alias z="zellij"
+alias zls="zellij ls"
 alias za="zellij attach"
 alias zn="zellij --session"
 alias zk="zellij kill-session"
 alias zka="zellij kill-all-sessions"
+alias cd="z"
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/material.omp.json)"
@@ -191,3 +193,4 @@ fi
 #eval "$(zellij setup --generate-auto-start zsh)"
 
 eval "$(atuin init zsh)"
+eval "$(zoxide init zsh)"

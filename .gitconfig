@@ -6,7 +6,7 @@
 
 [user]
   name = Oscar Marion
-  email = oscar.marion@capgemini.com
+  email = me@oscarmarion.dev
   signingkey = ~/.ssh/dev.pub
 
 [gpg]
