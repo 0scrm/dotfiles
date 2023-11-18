@@ -128,9 +128,8 @@ export PATH="$PNPM_HOME:$PATH"
 export BAT_THEME="TwoDark"
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && \. "/usr/local/opt/nvm/etc/bash_completion"
-
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -188,9 +187,11 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/material.omp.json)"
 fi
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #eval "$(zellij setup --generate-auto-start zsh)"
 
 eval "$(atuin init zsh)"
 eval "$(zoxide init zsh)"
+
+source ~/.fzf-tab/fzf-tab.plugin.zsh
+# source ~/.fzf-tab-completion/zsh/fzf-zsh-completion.sh

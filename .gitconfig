@@ -1,5 +1,5 @@
 [core]
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta
   excludesfile = ~/.gitignore_global
   editor = nano
   whitespace = -trailing-space
@@ -59,6 +59,7 @@
   wordRegex = .
   submodule = log
   tool = vscode
+  colorMoved = default
 
 [difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
@@ -79,6 +80,7 @@
 
 [merge]
   ff = false
+  conflictstyle = diff3
 
 [mergetool]
   keepBackup = false
@@ -111,9 +113,16 @@
 
 [http]
 	sslverify = false
+
 [init]
 	defaultBranch = main
+
 [interactive]
-	diffFilter = diff-so-fancy --patch
+    diffFilter = delta --color-only
+
 [tag]
 	gpgsign = true
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
